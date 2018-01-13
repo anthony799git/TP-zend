@@ -20,6 +20,7 @@ Pour accéder à PhpMyAdmin du site  : http://localhost:8181 .
 Les accès :
             - User: root
             - Password : demo
+            
 database : demo
 
 Il faudra rajouter des organisateurs via phpmyadmin pour le liée à une Meetup si on veut.
