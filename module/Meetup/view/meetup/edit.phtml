@@ -1,0 +1,43 @@
+
+<h1>Edit a Meetup</h1>
+
+<?php
+    $form = $this->form; /* @var $form \Zend\Form\Form */
+?>
+
+
+<div class="row">
+    <?= $this->form()->openTag($form); ?>
+    <div class="col-sm-3">
+        <?= $this->formLabel($form->get('title')) ?><br>
+        <?= $this->formInput($form->get('title')) ?><br>
+        <?= $this->formElementErrors($form->get('title')); ?>                   
+    </div>
+    <div class="col-sm-3">
+        <?= $this->formLabel($form->get('description')) ?><br>
+        <?= $this->formTextarea($form->get('description')) ?><br>
+        <?= $this->formElementErrors($form->get('description')); ?>                   
+    </div>
+    <div class="col-sm-3">
+        <?= $this->formLabel($form->get('date_start')) ?><br>
+        <?= $this->formInput($form->get('date_start')) ?><br>
+        <?= $this->formElementErrors($form->get('date_start')); ?> 
+    </div>
+    <div class="col-sm-3">
+        <?= $this->formLabel($form->get('date_end')) ?><br>
+        <?= $this->formInput($form->get('date_end')) ?><br>
+        <?= $this->formElementErrors($form->get('date_end')); ?> 
+    </div>
+    <div class="col-sm-3">
+        <?= $this->formLabel($form->get('organisateur')) ?><br>
+        <?= $this->formSelect($form->get('organisateur')) ?><br>
+        <?= $this->formElementErrors($form->get('organisateur')); ?> 
+    </div>
+    <div class="col-sm-12 text-center">
+        <?= $this->formInput($form->get('submit')) ?>
+        <?= $this->form()->closeTag($form); ?>
+    </div>
+</div>
+<div class="row">
+    <a class="btn btn-primary" href="<?= $this->url('meetups') ?>"> Back to List</a>
+</div>

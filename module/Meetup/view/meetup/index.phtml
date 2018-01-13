@@ -1,0 +1,26 @@
+
+<h1>List Meetups</h1>
+<div class="row">
+    <a class="btn btn-info" href="<?= $this->url('meetups/new') ?>"> New</a>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <h2>Title</h2>
+    </div>
+    <div class="col-sm-6">
+        <h2>Action</h2>
+    </div>
+</div>
+<?php foreach( $meetups as $meetup): ?>
+
+<div class="row">
+    <div class="col-sm-6">
+        <?= $meetup->getTitle() ?>
+    </div>
+    <div class="col-sm-6">
+        <a class="btn btn-warning" href="<?= $this->url('meetups/show', ['id' => $meetup->getId()]) ?>"> Show</a>
+        <a class="btn btn-success" href="<?= $this->url('meetups/edit', ['id' => $meetup->getId()]) ?>"> Edit</a>
+        <a class="btn btn-danger" href="<?= $this->url('meetups/delete', ['id' => $meetup->getId()]) ?>"> Delete</a>
+    </div>
+</div>
+<?php endforeach; ?>
