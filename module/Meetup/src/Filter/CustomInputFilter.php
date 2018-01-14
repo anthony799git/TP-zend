@@ -89,7 +89,7 @@ class CustomInputFilter extends InputFilter
                             return $startDate <= $endDate;
                         },
                         'messages' => [
-                            Callback::INVALID_VALUE => 'date_end must be early than the date_start',
+                            Callback::INVALID_VALUE => 'date_end must be recent than the date_start',
                         ],
                         
                     ],

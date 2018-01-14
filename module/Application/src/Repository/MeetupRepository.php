@@ -24,15 +24,4 @@ final class MeetupRepository extends \Doctrine\ORM\EntityRepository{
         $this->getEntityManager()->flush();
     }
 
-    public function createMeetupFromTitleDescriptionAndDates(string $title,string $description, DateTime $date_start, DateTime $date_end, string $idOrganisateur=null)
-    {
-        $meetup = new Meetup($title,$description, $date_start, $date_end);
-        
-        $organisateur = $this->getEntityManager()->getRepository('Application\Entity\Organisateur')->find($idOrganisateur);
-
-        $meetup->setOrganisateur($organisateur);
-        
-        return $meetup;
-    }
-
 }
